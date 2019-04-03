@@ -11,7 +11,8 @@ before_install:
     then
       echo "SKIP conan build for other packages"
       set +e
-      travis_terminate 0
+      pkill -9 -P $$ &> /dev/null || true
+      exit $1
     fi
 
 install:
