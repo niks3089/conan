@@ -26,6 +26,6 @@ script:
       conan upload --all binutils/2.31@includeos/latest -r includeos
     fi
     if [ -n "$TRAVIS_TAG" ]; then
-      conan copy --all binutils/2.31@includeos/latest includeos/stable
-      conan upload --all binutils/2.31@includeos/stable -r includeos
+      conan copy --all binutils/2.31@includeos/latest includeos/toolchain
+      conan upload --all binutils/2.31@includeos/toolchain -r includeos
     fi
